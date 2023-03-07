@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import type { AppProps } from 'next/app'
 
 import logoImg from '../assets/logo.svg'
@@ -12,7 +13,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <Container>
       <Header>
-        <Image src={logoImg} alt="Ignite Shop" />
+        <Link href="/">
+          <Image src={logoImg} alt="Ignite Shop" />
+        </Link>
         <CartButton>
           <div>
             <span className="cart-counter">1</span>

@@ -8,6 +8,7 @@ import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
 
 import { stripe } from '../lib/stripe';
+import cartWhiteImg from '../assets/cart-white.svg'
 import { HomeContainer, Product } from "../styles/pages/home";
 
 interface HomeProps {
@@ -40,8 +41,14 @@ export default function Home({ products }: HomeProps) {
               <Image src={product.imageUrl}  alt="" width={520} height={480} />
 
               <footer>
-                <strong>{product.name}</strong>
-                <span>{product.price}</span>
+                <div>
+                  <strong>{product.name}</strong>
+                  <span>{product.price}</span>
+                </div>
+                
+                <button>
+                  <Image src={cartWhiteImg} alt="Adicionar ao carrinho" />
+                </button>
               </footer>
             </Product>
           </Link>

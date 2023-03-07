@@ -37,9 +37,15 @@ export const Product = styled('div', {
     opacity: 0,
     transition: 'all 0.2s ease-in-out',
 
+    div: {
+      display: 'flex',
+      flexDirection: 'column'
+    },
+
     strong: {
       fontSize: '$lg',
       color: '$gray100',
+      marginBottom: '4px',
     },
 
     span: {
@@ -47,6 +53,15 @@ export const Product = styled('div', {
       fontWeight: 'bold',
       color: '$green300',
     },
+
+    button: {
+      width: '3.5rem',
+      height: '3.5rem',
+      border: 'none',
+      borderRadius: '6px',
+      cursor: 'pointer',
+      backgroundColor: '$green500'
+    }
   },
 
   '&:hover': {
